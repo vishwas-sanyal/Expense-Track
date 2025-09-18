@@ -225,35 +225,37 @@
 /* Mobile friendly adjustments */
 @media (max-width: 480px) {
     .container {
-        padding: 15px;
+        padding: 20px 5px;
+        border-radius: 15px;
     }
 
     .input {
-        padding: 12px 15px;
+        padding: 10px 12px;
         font-size: 14px;
+        width: 90%;
     }
 
     .submit-btn {
-        width: 100%;
+        width: 50%;
         font-size: 15px;
     }
 
     .overview-container {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .add-btn {
-        width: 100%;
+        width: 80%;
         font-size: 15px;
     }
 
     .tracker-container {
         padding: 20px 15px;
+        width: 350px;
     }
 
-    .heading,
-    .t-heading {
+    .heading {
         font-size: 24px;
     }
 
@@ -264,27 +266,32 @@
 
     .expense-box,
     .income-box {
-        width: 100%;
+        width: 70%;
     }
 
     .transaction-item {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 8px;
-        padding: 12px;
+        font-weight: bold;
+        padding: 5px;
     }
 
     .remove-button {
-        align-self: flex-end;
+        /* align-self: flex-end; */
+        margin-left: 75%;
+        margin-top: -35px;
     }
 
     .transactions-heading {
-        font-size: 20px;
+        font-size: 25px;
         text-align: center;
     }
 
     .search-input {
         padding: 12px 15px;
         font-size: 14px;
+        width: 100%;
+        align-items: center;
     }
 }

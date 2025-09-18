@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +7,8 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Aclonica, sans-serif; */
+    font-family: "Macondo", cursive;
     background-color: #252525;
     color: #222;
     display: flex;
@@ -18,22 +21,11 @@ body {
 .main {
     display: flex;
     flex-direction: column;
-    /* good for stacking elements vertically */
     justify-content: center;
     align-items: center;
     width: 100%;
     max-width: 600px;
-    /* prevents it from being too wide on desktop */
     padding: 16px;
-}
-
-/* Responsive typography */
-h1,
-h2,
-h3,
-p {
-    text-align: center;
-    word-wrap: break-word;
 }
 
 /* Example responsive behavior for future components */
