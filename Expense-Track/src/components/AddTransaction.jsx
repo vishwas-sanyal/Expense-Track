@@ -1,10 +1,19 @@
 import { useState } from "react";
 import "./styles.css";
 
+const today = new Date();
+const day = today.getDate().toString().padStart(2, '0');
+const month = (today.getMonth() + 1).toString().padStart(2, '0');
+const year = today.getFullYear();
+
+const date = `${day}-${month}-${year}`;
+const time = new Date().toLocaleTimeString();
+
 const AddTransaction = ({ setToggle, AddTransactions }) => {
     const [amount, setAmount] = useState("");
     const [details, setDetails] = useState("");
     const [transType, setTransType] = useState("expense");
+
 
     const AddTransactionData = () => {
         AddTransactions({
@@ -12,6 +21,8 @@ const AddTransaction = ({ setToggle, AddTransactions }) => {
             details,
             transType,
             id: Date.now(),
+            date,
+            time,
         });
         // setToggle();
         setAmount("");
