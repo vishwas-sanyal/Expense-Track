@@ -100,17 +100,14 @@
     width: 600px;
     max-width: 100%;
     background-color: #dceaff;
-    padding: 30px 20px;
+    padding: 20px 20px;
     border: 1px solid #000;
     border-radius: 15px;
     margin: 10px auto;
 }
 
 .heading {
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
+    height: 20lvh;
 }
 
 .transaction-details {
@@ -401,7 +398,7 @@
     }
 
     .heading {
-        font-size: 24px;
+        margin: -40px 0px;
     }
 
     .transaction-details {

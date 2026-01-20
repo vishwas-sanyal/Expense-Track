@@ -69,8 +69,8 @@ const Tracker = () => {
     return (
         <div className="tracker-container">
             <Database />
-            <h1 className="heading">Expense-Track</h1>
-
+            {/* <h1 className="heading">Xpenso</h1> */}
+            <img className="heading" src="/Xpenso.svg" alt="Xpenso" />
 
             <OverviewComponent
                 toggle={toggle}

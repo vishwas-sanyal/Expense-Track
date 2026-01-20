@@ -11,6 +11,8 @@ const Database = () => {
     const [expandedWeekId, setExpandedWeekId] = useState(null);
     const [weekData, setWeekData] = useState([]);
 
+    const click = new Audio("/click.mp3");
+
     // -----------------------------
     // LOAD WEEKS ON APP LOAD
     // -----------------------------
@@ -59,7 +61,7 @@ const Database = () => {
         <div>
 
             {/* Top Left Button */}
-            <button className="menu-btn" onClick={() => setOpen(true)}>☰</button>
+            <button className="menu-btn" onClick={() => { setOpen(true); click.play(); }}>☰</button>
 
             {/* Backdrop */}
             <div
@@ -76,7 +78,7 @@ const Database = () => {
             <div className={`drawer ${open ? "open" : ""}`}
                 onClick={(e) => e.stopPropagation()}>
                 <div className="drawer-header">
-                    <button className="close-btn" onClick={() => setOpen(false)}>✕</button>
+                    <button className="close-btn" onClick={() => { setOpen(false); click.play(); }}>✕</button>
                     <h2>Weekly Database</h2>
                 </div>
 
@@ -88,12 +90,12 @@ const Database = () => {
                         <ul>
                             {weeks.map((week) => (
                                 <li key={week.weekId} className="drawer-item">
-                                    <span onClick={() => { handleWeekClick(week.weekId); e.stopPropagation(); }}>
+                                    <span onClick={() => { handleWeekClick(week.weekId); click.play(); }}>
                                         {week.weekId}
                                     </span>
 
 
-                                    <button onClick={() => { handleDeleteWeek(week.weekId); e.stopPropagation(); }}>
+                                    <button onClick={() => { handleDeleteWeek(week.weekId); click.play(); }}>
                                         Remove
                                     </button>
                                     {/* EXPANDED DATA (INLINE) */}
