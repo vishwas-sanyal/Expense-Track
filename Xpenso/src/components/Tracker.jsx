@@ -62,9 +62,31 @@ const Tracker = () => {
     //     runWeeklyMigration();
     // }, []);
 
-    setTimeout(() => {
-        runWeeklyMigration();
-    }, 604800000)
+    // setTimeout(() => {
+    //     runWeeklyMigration();
+    // }, 604800000)
+
+    function isWeekend() {
+        const day = new Date().getDay(); // 0 = Sun, 6 = Sat
+        return day === 0 || day === 6;
+    }
+
+    function checkWeeklyMigration() {
+        const lastRun = Number(localStorage.getItem("lastSavedWeek"));
+
+        if (
+            isWeekend() &&
+            (!lastRun || Date.now() - lastRun >= WEEK)
+        ) {
+            runWeeklyMigration();
+            localStorage.setItem("lastSavedWeek", Date.now());
+        }
+    }
+
+    useEffect(() => {
+        checkWeeklyMigration();
+    }, []);
+
 
     return (
         <div className="tracker-container">

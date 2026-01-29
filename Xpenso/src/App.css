@@ -28,6 +28,10 @@ body {
     padding: 16px;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 /* Example responsive behavior for future components */
 @media (max-width: 768px) {
     .main {
