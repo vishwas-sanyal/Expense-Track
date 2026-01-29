@@ -1,7 +1,9 @@
-# Expense-Track
+# Xpenso
 
 A Expense Tracker web app built with React + Vite that allows users to add, manage, search, and delete transactions.
 It calculates your total balance, expenses, and budget dynamically, and even saves everything in localStorage for persistence.
+
+Visit: https://xpenso-vs.vercel.app/
 
 ## Features
 
