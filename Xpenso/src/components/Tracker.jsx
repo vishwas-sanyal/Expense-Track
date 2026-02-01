@@ -73,7 +73,7 @@ const Tracker = () => {
 
     function checkWeeklyMigration() {
         const lastRun = Number(localStorage.getItem("lastSavedWeek"));
-
+        const WEEK = 7 * 24 * 60 * 60 * 1000;
         if (
             isWeekend() &&
             (!lastRun || Date.now() - lastRun >= WEEK)

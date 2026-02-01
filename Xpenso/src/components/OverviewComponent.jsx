@@ -1,4 +1,5 @@
 import "./styles.css";
+import ScanTransactions from "./ScanTransactions.jsx"
 
 const OverviewComponent = ({ toggle, setToggle, income, expense }) => {
     const bal = income - expense;
@@ -10,6 +11,7 @@ const OverviewComponent = ({ toggle, setToggle, income, expense }) => {
             <h2 className="balance">
                 Balance <span>₹{bal}</span>
             </h2>
+            {/* <button>Scan</button> */}<ScanTransactions />
             <button
                 className="add-btn"
                 onClick={() => { setToggle(!toggle); click.play(); }}
