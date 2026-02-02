@@ -6,6 +6,9 @@
     "background_color": "#252525",
     "theme_color": "#000000",
     "description": "Track your expenses easily.",
+    "permissions": [
+        "camera"
+    ],
     "icons": [
         {
             "src": "/logo.png",
