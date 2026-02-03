@@ -116,27 +116,6 @@ const Database = () => {
                             ))}
                         </ul>
                     )}
-                    {/* <div>
-                        {!selectedWeek && <p>Select a week to view transactions</p>}
-
-                        {selectedWeek && (
-                            <div>
-                                <h2>Week: {selectedWeek}</h2>
-
-                                <ol>
-                                    {transactions.map((tx) => (
-                                        <li key={tx.id}>
-                                            <p>Date: {tx.date}</p>
-                                            <p>Time: {tx.time}</p>
-                                            <p>Amount: {tx.amount}</p>
-                                            <p>Detail: {tx.details}</p>
-                                            <p>Type: {tx.transType}</p>
-                                        </li>
-                                    ))}
-                                </ol>
-                            </div>
-                        )}
-                    </div> */}
                 </div>
             </div>
         </div>
